@@ -23,3 +23,12 @@ export const Large: StoryObj<TextProps> = {
         size: 'lg'
     }
 };
+
+export const CustomText: StoryObj<TextProps> = {
+  args: {
+      asChild: true,
+      children: (
+       <h1>Vinicius está aprendendo React! Aos poucos vai se desenvolvendo mais e mais!</h1>
+      ),
+  }
+};
