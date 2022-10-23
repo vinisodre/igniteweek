@@ -24,11 +24,24 @@ export const Large: StoryObj<TextProps> = {
     }
 };
 
-export const CustomText: StoryObj<TextProps> = {
+export const CustomComponent: StoryObj<TextProps> = {
   args: {
       asChild: true,
       children: (
-       <h1>Vinicius está aprendendo React! Aos poucos vai se desenvolvendo mais e mais!</h1>
+       <p>Vinicius está aprendendo React! Aos poucos vai se desenvolvendo mais e mais!</p>
       ),
+  },
+  // Aqui impedimos que pessoas alterem dados pelos Storybook. Impedimos que o argTypes e o asChild sejam vistos no SB
+  argTypes: {
+    children: {
+      table: {
+        disable:true,
+      }
+    },
+    asChild: {
+      table: {
+        disable:true,
+      }
+    }
   }
 };
