@@ -10,7 +10,9 @@ export interface ButtonProps {
 export function Button({ children, asChild }: ButtonProps) {
   const Comp = asChild ? Slot : "button";
 
-  return <Comp className={clsx(" text-gray-100 font-sans")}>
+  return <Comp className={clsx(
+    'py-4 px-3 bg-cyan-500 rounded font-bold w-full text-black hover:bg-cyan-300 transition-colors focus: ring-2 ring-white'
+  )}>
     {children}
     </Comp>;
 }
